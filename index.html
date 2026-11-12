@@ -13,30 +13,51 @@
   <main class="app">
     <header class="top">
       <h1>Colony Zero</h1>
-      <div class="coins" aria-label="Coin balance"><span class="dot"></span><span id="coins">0</span> <span id="sym"></span></div>
+      <div class="right"><div class="coins" aria-label="Coin balance"><span class="dot"></span><span id="coins">0</span> <span id="sym"></span></div><button id="wallet" hidden>Connect wallet</button></div>
     </header>
-
     <section class="level" aria-label="Level progress">
       <div class="level-row"><strong id="lvl">Level 1</strong><span id="xptxt"></span></div>
       <div class="bar"><div id="xpbar"></div></div>
     </section>
+    <nav class="tabs"><button data-tab="base" class="on">Base</button><button data-tab="chars">Characters</button><button data-tab="ranks">Ranks</button></nav>
 
-    <section class="hero" id="hero" aria-label="Your character"></section>
+    <div id="tab-base">
+      <div class="stats"><span>Ore <b id="ore">0</b></span><span>Workers <b id="wk">2</b></span><span>Drills <b id="dr">0</b></span></div>
+      <div class="note" id="offline" hidden><span id="offtxt"></span><button id="offbtn">Collect</button></div>
+      <div class="note" id="dailybox" hidden><span id="dailytxt"></span><button id="dailybtn">Claim</button></div>
+      <canvas id="scene" aria-label="Your mining base"></canvas>
+      <div class="acts"><button id="hire"></button><button id="drill"></button></div>
+      <p class="hint" id="bmsg">Tap an ore rock to mine it. Drag to rotate.</p>
+    </div>
 
-    <h2>Characters</h2>
-    <section class="grid" id="grid"></section>
-
-    <details class="dev">
-      <summary>Test tools</summary>
-      <div class="dev-row">
-        <button data-dev="xp">+50 XP</button>
-        <button data-dev="coins">+100 coins</button>
-        <button data-dev="reset">Reset save</button>
-      </div>
-    </details>
+    <div id="tab-chars" hidden>
+      <div class="note" id="faucet" hidden><span>Need test coins? Claim free coins once a day.</span><button id="faucetbtn">Claim</button></div>
+      <section class="hero" id="hero" aria-label="Your character"></section>
+      <h2>Characters</h2>
+      <section class="grid" id="grid"></section>
+      <details class="dev">
+        <summary>Test tools</summary>
+        <div class="dev-row">
+          <button data-dev="xp">+50 XP</button>
+          <button data-dev="coins">+100 coins</button>
+          <button data-dev="reset">Reset save</button>
+        </div>
+      </details>
+    </div>
+    <div id="tab-ranks" hidden>
+      <h2>Leaderboard</h2>
+      <ol class="ranks" id="ranklist"></ol>
+      <div class="name-row"><input id="pname" maxlength="16" aria-label="Your name"><button id="savename">Save name</button></div>
+    </div>
   </main>
   <div class="toast" id="toast" role="status"></div>
   <script src="characters.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="cloud.js"></script>
+  <script src="chain.js"></script>
   <script src="game.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="base.js"></script>
+  <script src="extras.js"></script>
 </body>
 </html>

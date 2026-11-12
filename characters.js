@@ -2,7 +2,18 @@ window.CONFIG = {
   SAVE_KEY: 'colonyzero.save.v1',
   TOKEN_SYMBOL: 'TC',
   XP_BASE: 100,
-  UNLOCK_LEVEL: 5
+  UNLOCK_LEVEL: 5,
+  XP_PER_ORE: 2,
+  OFFLINE_CAP_HOURS: 8,
+  OFFLINE_WORKER_RATE: 0.015,
+  OFFLINE_DRILL_RATE: 0.05,
+  SUPABASE_URL: '',
+  SUPABASE_ANON_KEY: '',
+  CHAIN: { id: 0, name: '', rpc: '', explorer: '', currency: { name: 'ETH', symbol: 'ETH', decimals: 18 } },
+  TOKEN_ADDRESS: '',
+  TOKEN_DECIMALS: 18,
+  RECEIVER: '',
+  FAUCET: false
 };
 
 window.CHARACTERS = [

@@ -37,3 +37,22 @@ button:focus-visible,summary:focus-visible{outline:3px solid var(--ore);outline-
 .toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,30px);background:var(--ore);color:var(--ore-ink);border:2px solid var(--line);border-radius:10px;padding:10px 16px;font-weight:500;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;max-width:90vw;text-align:center}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 @media(prefers-reduced-motion:reduce){#xpbar,.toast{transition:none}}
+[hidden]{display:none!important}
+.tabs{display:flex;gap:8px;margin-top:16px}
+.tabs button.on{background:var(--ore);color:var(--ore-ink)}
+.stats{display:flex;justify-content:space-between;margin-top:14px;color:var(--muted);font-size:14px}
+.stats b{color:var(--text);font-weight:500}
+#scene{width:100%;height:340px;display:block;touch-action:none;border:3px solid var(--line);border-radius:14px;margin-top:10px}
+.acts{display:flex;gap:8px;margin-top:10px}
+.hint{font-size:13px;color:var(--muted);text-align:center;margin:8px 0 0}
+.note{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--panel);border:2px solid var(--ore);border-radius:10px;padding:8px 12px;margin-top:12px;font-size:14px}
+.note button{width:auto;background:var(--ore);color:var(--ore-ink);white-space:nowrap}
+.ranks{list-style:none;padding:0;margin:0}
+.ranks li{display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--line)}
+.ranks li.me{color:var(--ore);font-weight:500}
+.name-row{display:flex;gap:8px;margin-top:16px}
+.name-row input{flex:1;min-width:0;font:inherit;padding:6px 10px;border:2px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text)}
+.name-row button{width:auto}
+.right{display:flex;gap:8px;align-items:center}
+#wallet{width:auto;background:var(--ore);color:var(--ore-ink);border-radius:999px;padding:4px 12px;white-space:nowrap}
+.note+.hero{margin-top:12px}
