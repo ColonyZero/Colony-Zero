@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colony Zero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Colony Zero</h1>
+      <div class="coins" aria-label="Coin balance"><span class="dot"></span><span id="coins">0</span> <span id="sym"></span></div>
+    </header>
+
+    <section class="level" aria-label="Level progress">
+      <div class="level-row"><strong id="lvl">Level 1</strong><span id="xptxt"></span></div>
+      <div class="bar"><div id="xpbar"></div></div>
+    </section>
+
+    <section class="hero" id="hero" aria-label="Your character"></section>
+
+    <h2>Characters</h2>
+    <section class="grid" id="grid"></section>
+
+    <details class="dev">
+      <summary>Test tools</summary>
+      <div class="dev-row">
+        <button data-dev="xp">+50 XP</button>
+        <button data-dev="coins">+100 coins</button>
+        <button data-dev="reset">Reset save</button>
+      </div>
+    </details>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="characters.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
